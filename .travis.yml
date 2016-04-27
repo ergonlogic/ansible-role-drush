@@ -1,5 +1,6 @@
 ---
-language: php
+language: python
+python: "2.7"
 
 dist: trusty
 
@@ -13,10 +14,6 @@ env:
 
 install:
   - make deps-ansible
-  # TODO: investigate why we need to install this separately, as it should be
-  # covered by the deps above.
-  - sudo -H pip install --upgrade pip
-  - sudo -H pip install yaml
   - make ansible
 
 script:
