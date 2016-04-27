@@ -15,7 +15,8 @@ install:
   - make deps-ansible
   # TODO: investigate why we need to install this separately, as it should be
   # covered by the deps above.
-  - sudo pip install yaml
+  - pip install --upgrade pip
+  - pip install --user yaml
   - make ansible
 
 script:
