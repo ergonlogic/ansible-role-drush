@@ -4,13 +4,12 @@ python: "2.7"
 
 dist: trusty
 
-global:
-  env:
-    - ANSIBLE_ROLES_PATH=tests/roles
-
 env:
-  - ANSIBLE_REQUIREMENTS=tests/roles/composer_requirements.yml ANSIBLE_PLAYBOOK=tests/playbooks/composer.yml
-  - ANSIBLE_REQUIREMENTS=tests/roles/phar_requirements.yml ANSIBLE_PLAYBOOK=tests/playbooks/phar.yml
+  global:
+    - ANSIBLE_ROLES_PATH=tests/roles
+  matrix:
+    - ANSIBLE_REQUIREMENTS=tests/roles/composer_requirements.yml ANSIBLE_PLAYBOOK=tests/playbooks/composer.yml
+    - ANSIBLE_REQUIREMENTS=tests/roles/phar_requirements.yml ANSIBLE_PLAYBOOK=tests/playbooks/phar.yml
 
 install:
   - sudo make deps-ansible
