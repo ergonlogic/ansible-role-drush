@@ -22,7 +22,7 @@ script:
   - ". d"
 
   # Run playbook tests
-  - sudo make ansible-playbook-test
+  - make ansible-playbook-test
 
   # Check if drush is installed and working.
   - drush --version
