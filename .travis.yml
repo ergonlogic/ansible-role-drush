@@ -11,8 +11,8 @@ addons:
     - python-jinja2
 
 env:
-  - ANSIBLE_REQUIREMENTS=tests/composer_requirements.yml ANSIBLE_PLAYBOOK=tests/composer_playbook.yml
-  - ANSIBLE_REQUIREMENTS=tests/phar_requirements.yml ANSIBLE_PLAYBOOK=tests/phar_playbook.yml
+  - ANSIBLE_REQUIREMENTS=tests/roles/composer_requirements.yml ANSIBLE_PLAYBOOK=tests/playbook/composer.yml
+  - ANSIBLE_REQUIREMENTS=tests/roles/phar_requirements.yml ANSIBLE_PLAYBOOK=tests/playbooks/phar.yml
 
 install:
   - make ansible
