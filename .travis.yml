@@ -14,7 +14,7 @@ global:
     - ANSIBLE_ROLES_PATH=tests/roles
 
 env:
-  - ANSIBLE_REQUIREMENTS=tests/roles/composer_requirements.yml ANSIBLE_PLAYBOOK=tests/playbook/composer.yml
+  - ANSIBLE_REQUIREMENTS=tests/roles/composer_requirements.yml ANSIBLE_PLAYBOOK=tests/playbooks/composer.yml
   - ANSIBLE_REQUIREMENTS=tests/roles/phar_requirements.yml ANSIBLE_PLAYBOOK=tests/playbooks/phar.yml
 
 install:
@@ -25,7 +25,7 @@ script:
   - ". d"
 
   # Run playbook tests
-  - make ansible-playbook-test
+  - sudo make ansible-playbook-test
 
   # Check if drush is installed and working.
   - drush --version
