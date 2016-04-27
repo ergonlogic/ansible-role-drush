@@ -14,7 +14,7 @@ env:
 
 install:
   - make deps-ansible
-  - sudo apt-get update python-yaml
+  - sudo apt-get install python-yaml
   - make ansible
 
 script:
