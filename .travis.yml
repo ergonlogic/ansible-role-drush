@@ -13,6 +13,9 @@ env:
 
 install:
   - make deps-ansible
+  # TODO: investigate why we need to install this separately, as it should be
+  # covered by the deps above.
+  - sudo pip install yaml
   - make ansible
 
 script:
