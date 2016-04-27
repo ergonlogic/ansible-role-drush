@@ -10,6 +10,10 @@ addons:
     - python-yaml
     - python-jinja2
 
+global:
+  env:
+    - ANSIBLE_ROLES_PATH=tests/roles
+
 env:
   - ANSIBLE_REQUIREMENTS=tests/roles/composer_requirements.yml ANSIBLE_PLAYBOOK=tests/playbook/composer.yml
   - ANSIBLE_REQUIREMENTS=tests/roles/phar_requirements.yml ANSIBLE_PLAYBOOK=tests/playbooks/phar.yml
