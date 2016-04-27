@@ -13,7 +13,7 @@ env:
   - ANSIBLE_REQUIREMENTS=tests/roles/phar_requirements.yml ANSIBLE_PLAYBOOK=tests/playbooks/phar.yml
 
 install:
-  - make deps-ansible
+  - sudo make deps-ansible
   - pip install pyyaml jinja2
   - make ansible
 
