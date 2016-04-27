@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  remote_user: root
+  gather_facts: True
+
+  vars:
+    php_enable_webserver: false
+    php_opcache_enable: "0"
+
+  roles:
+    - geerlingguy.php
+    - ergonlogic.drush
