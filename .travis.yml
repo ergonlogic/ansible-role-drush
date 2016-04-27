@@ -3,12 +3,6 @@ language: php
 
 dist: trusty
 
-addons:
-  apt:
-    packages:
-    - python-yaml
-    - python-jinja2
-
 global:
   env:
     - ANSIBLE_ROLES_PATH=tests/roles
@@ -18,6 +12,7 @@ env:
   - ANSIBLE_REQUIREMENTS=tests/roles/phar_requirements.yml ANSIBLE_PLAYBOOK=tests/playbooks/phar.yml
 
 install:
+  - make deps-ansible
   - make ansible
 
 script:
