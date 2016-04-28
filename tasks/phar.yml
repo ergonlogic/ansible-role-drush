@@ -4,9 +4,13 @@
     url: http://files.drush.org/drush.phar
     dest: "{{ drush_install_path }}"
 
-- name: Ensure Drush is in path and executable
+- name: Ensure Drush is executable
+  file:
+    path: "{{ drush_install_path }}"
+    mode: "a+x"
+
+- name: Ensure Drush is in path
   file:
     state: link
     path: "{{ drush_path }}"
     src: "{{ drush_install_path }}"
-    mode: "a+x"

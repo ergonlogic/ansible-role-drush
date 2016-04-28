@@ -1,6 +1,8 @@
 ---
-- include: phar.yml
+- name: Install Drush via phar
+  include: phar.yml
   when: drush_install_method == "phar"
 
-- include: composer.yml
+- name: Install Drush via Composer
+  include: composer.yml
   when: drush_install_method == "composer"
