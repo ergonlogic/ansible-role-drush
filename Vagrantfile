@@ -20,7 +20,10 @@ Vagrant.configure(2) do |config|
       'ANSIBLE_REQUIREMENTS' => 'tests/roles/phar_requirements.yml',
       'ANSIBLE_ROLES_PATH'   => 'tests/roles',
       'ANSIBLE_PLAYBOOK'     => 'tests/playbooks/phar.yml',
+      'PYTHONUNBUFFERED'     => '1',
+      'ANSIBLE_FORCE_COLOR'  => 'true',
       }
+    s.keep_color = true
   end
 
 end
