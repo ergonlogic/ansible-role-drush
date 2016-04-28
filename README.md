@@ -20,6 +20,12 @@ The location of the entire drush installation (includes all the supporting files
 
 The path where drush will be installed and available to your system. Should be in your user's `$PATH` so you can run commands simply with `drush` instead of the full path.
 
+    drush_install_method: phar
+
+The method used to install Drush. Options include 'phar' and 'composer'. Defaults to 'phar'.
+
+### Git/Composer-based Variables
+
     drush_version: "master"
 
 The version of Drush to install (examples: `"master"` for the bleeding edge, `"7.x"`, `"6.x"`, `"6.2.0"`). This should be a string as it refers to a git branch, tag, or commit hash.
@@ -35,15 +41,18 @@ These options are the safest for avoiding GitHub API rate limits when installing
 
 ## Dependencies
 
-  - geerlingguy.git (Installs Git).
   - geerlingguy.php (Installs PHP).
+
+### Git/Composer-based Dependencies
+
+  - geerlingguy.git (Installs Git).
   - geerlingguy.composer (Installs Composer).
 
 ## Example Playbook
 
     - hosts: servers
       roles:
-        - { role: geerlingguy.drush }
+        - ergonlogic.drush
 
 After the playbook runs, the `drush` command will be accessible from normal system accounts.
 
@@ -53,4 +62,4 @@ MIT / BSD
 
 ## Author Information
 
-This role was created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
+This role was initially created in 2014 by [Jeff Geerling](http://jeffgeerling.com/). It has since been significantly altered by [Christopher Gervais](http://ergonlogic.com/)
