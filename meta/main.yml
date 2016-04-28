@@ -1,8 +1,8 @@
 ---
 dependencies:
-  - geerlingguy.git
   - geerlingguy.php
-  - geerlingguy.composer
+  #- geerlingguy.git
+  #- geerlingguy.composer
 
 galaxy_info:
   author: geerlingguy

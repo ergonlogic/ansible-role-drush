@@ -4,6 +4,7 @@
   gather_facts: True
 
   vars:
+    drush_install_method: composer
     php_enable_webserver: false
     php_opcache_enable: "0"
 
